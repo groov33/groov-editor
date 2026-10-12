@@ -66,8 +66,11 @@ const Home = () => {
                     <span className="createInfo">
                         If you don't have an invite then create &nbsp;
                         <a
-                            onClick={createNewRoom}
-                            href=""
+                            onClick={(e) => {
+                                e.preventDefault();
+                                createNewRoom();
+                            }}
+                            href="#new-room"
                             className="createNewBtn"
                         >
                             new room
@@ -77,7 +80,7 @@ const Home = () => {
             </div>
             <footer>
                 <h4>
-                    Built with 💛 by <a href="https://github.com/groov33">Ayush</a>
+                    Built with 💛 by <a href="https://github.com/groov33" target="_blank" rel="noreferrer">Ayush Pandey</a>
                 </h4>
             </footer>
         </div>
